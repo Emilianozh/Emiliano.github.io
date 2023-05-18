@@ -16,6 +16,10 @@
     </style>
 </head>
 <body text="white" background="Imagenes/Imagen fondo3.jpg">
+   <div>
+        <p id="Midiv"></p>
+        <button onclick="AgregarElemento()">Agregar</button>
+    </div>
     <div>
         <button id="Fondo" onclick="Fondo()">Cambiar Fondo</button>
     </div>
@@ -78,6 +82,11 @@
     <script>
         function esconderElemento() {
             document.getElementById("texto2").innerHTML = "";
+        }
+    </script>
+    <script>
+        function AgregarElemento(){
+            document.getElementById('Midiv').innerHTML = "Este texto no lo escribió Emiliano, lo escribió JavaScript"
         }
     </script>
 </body>
