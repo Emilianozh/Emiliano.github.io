@@ -57,7 +57,11 @@
         La jugabilidad, los torneos, las rankeds funcionan (casi todas) de maravilla y casi no hay tóxicos (por lo menos en mis partidas no). Hay cosas muy chulas de inventario y que se pueda quemar inventario para conseguir algo de mayor categoría le da muchos puntos. Hace poco me toco un Dominus tw y lo vendí por 10k creditos, consegui bastante inventario.
         Es un juego que se tarda lo suyo aprender y lo recomiendo para la gente que quiera buscar nuevos juegos gratis y divertidos. Me parece de lo mejor de Epic Games.
     </p>
-    <img src="Imagenes/Imagen3.webp" width="500px">
+    <div>
+        <img id = "image2" src="Imagenes/Imagen3.webp"  width="500px">
+        <button onclick="cambiarAtributo()">Cambiar imagen</button>
+        <button onclick="cambiarAtributo2()">Regresar imagen</button>
+    </div>
     <script>
         function Fondo(){
             let body = document.getElementsByTagName('body')[0];
@@ -87,6 +91,12 @@
     <script>
         function AgregarElemento(){
             document.getElementById('Midiv').innerHTML = "Este texto no lo escribió Emiliano, lo escribió JavaScript"
+        }
+    </script>
+    <script>
+        function Imagenes(){
+            document.getElementById("imagen2");
+            let img = ["Imagenes/Imagen2.webp","Imagenes/Imagen3.webp",]
         }
     </script>
 </body>
