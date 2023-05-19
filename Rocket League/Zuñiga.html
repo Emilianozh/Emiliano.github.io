@@ -58,13 +58,9 @@
         Es un juego que se tarda lo suyo aprender y lo recomiendo para la gente que quiera buscar nuevos juegos gratis y divertidos. Me parece de lo mejor de Epic Games.
     </p>
     <div>
-        arr.forEach{
-            <img src="Imagenes/Imagen3.webp"  width="300px">
-            <button onclick="Imagenes()">Siguiente</button>
-            <button onclick="Imagenes()">Anterior</button>
-        }
-        <button onclick="Imagenes()">Siguiente</button>
-        <button onclick="Imagenes()">Anterior</button>
+        <img id = "imagen1" src="Imagenes/Imagen3.webp"  width="300px">
+        <button onclick="Siguiente()">Siguiente</button>
+        <button onclick="Anterior()">Anterior</button> 
     </div>
     <script>
         function Fondo(){
@@ -98,8 +94,24 @@
         }
     </script>
     <script>
-        function Imagenes(){
-            var arr = ["Imagenes/Imagen2.webp","Imagenes/Imagen3.webp","Imagenes/Imagen fondo3"]
+            var cont = 0;
+            var arr = ["Imagenes/Imagen3.webp","Imagenes/Imagen fondo3.jpg","Imagenes/Imagen fondo.jpg","Imagenes/Imagen fondo2.jpg","Imagenes/Imagen2.webp"]
+
+        function Siguiente(){
+            if(cont==4){
+                cont = 0;
+            }else{
+                cont = cont +1;
+            }
+            document.getElementById("imagen1").src = arr[cont];
+        }
+        function Anterior(){
+            if(cont==0){
+                cont = 4;
+            }else{
+                cont = cont -1;
+            }
+            document.getElementById("imagen1").src = arr[cont];
         }
     </script>
 </body>
