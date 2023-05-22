@@ -32,6 +32,12 @@
         let arr_split = arr.split('-');
         
         document.getElementById("edad").innerHTML = 2023 - arr_split[0];
+        
+        if(getParameter("Contraseña").length < 5){
+            alert("Su contraseña es insegura");
+        }else{
+            alert("Su contraseña es segura");
+        }
 
     </script>
 </body>
