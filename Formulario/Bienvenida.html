@@ -11,7 +11,9 @@
 <body>
     <h1 id="nombres" ></h1>
     <h2 id="apellidos"></h2>
-    <a id="correo"></a>
+    <a id="correo"></a> <br>
+    <a id="telefono"></a>
+    <p id="edad"></p>
     <script>
         getParameter = (key) => {
             address = window.location.search;
@@ -22,7 +24,14 @@
         document.getElementById("apellidos").innerHTML = getParameter("Apellido");
         document.getElementById("correo").innerHTML = getParameter("Correo");
         document.getElementById("correo").href = "mailto:" + getParameter("Correo");
+        document.getElementById("telefono").innerHTML = getParameter("Telefono");
+        document.getElementById("telefono").href = "tel:" + getParameter("Telefono");
 
+
+        var arr = getParameter("Fecha")
+        let arr_split = arr.split('-');
+        
+        document.getElementById("edad").innerHTML = 2023 - arr_split[0];
 
     </script>
 </body>
