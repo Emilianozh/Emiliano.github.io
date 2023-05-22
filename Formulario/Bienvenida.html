@@ -11,6 +11,7 @@
 <body>
     <h1 id="nombres" ></h1>
     <h2 id="apellidos"></h2>
+    <a id="correo"></a>
     <script>
         getParameter = (key) => {
             address = window.location.search;
@@ -19,6 +20,10 @@
         }
         document.getElementById("nombres").innerHTML = getParameter("Nombre");
         document.getElementById("apellidos").innerHTML = getParameter("Apellido");
+        document.getElementById("correo").innerHTML = getParameter("Correo");
+        document.getElementById("correo").href = "mailto:" + getParameter("Correo");
+
+
     </script>
 </body>
 </html>
