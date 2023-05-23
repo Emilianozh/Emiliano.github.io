@@ -20,18 +20,20 @@
             parameterList = new URLSearchParams(address);
             return parameterList.get(key);
         }
-        document.getElementById("nombres").innerHTML = getParameter("Nombre");
-        document.getElementById("apellidos").innerHTML = getParameter("Apellido");
-        document.getElementById("correo").innerHTML = getParameter("Correo");
+        document.getElementById("nombres").innerHTML = "Tu nombre es: " + getParameter("Nombre");
+        document.getElementById("apellidos").innerHTML = "Tu apellido es: " + getParameter("Apellido");
+        document.getElementById("correo").innerHTML = "Tu correo es: " + getParameter("Correo");
         document.getElementById("correo").href = "mailto:" + getParameter("Correo");
-        document.getElementById("telefono").innerHTML = getParameter("Telefono");
+        document.getElementById("telefono").innerHTML ="Tu telefono es: " + getParameter("Telefono");
         document.getElementById("telefono").href = "tel:" + getParameter("Telefono");
 
 
         var arr = getParameter("Fecha")
         let arr_split = arr.split('-');
         
-        document.getElementById("edad").innerHTML = 2023 - arr_split[0];
+        var num = 2023 - arr_split[0]
+
+        document.getElementById("edad").innerHTML = "Tu edad es: " + num;
         
         if(getParameter("Contraseña").length < 5){
             alert("Su contraseña es insegura");
